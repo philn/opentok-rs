@@ -18,6 +18,9 @@ mod tests {
     use std::sync::{Arc, Mutex};
 
     fn setup_test() -> (String, String, String) {
+        if let Err(e) = env_logger::try_init() {
+            eprintln!("{}", e);
+        }
         opentok::init().unwrap();
         let api_key = env::var("OPENTOK_KEY").unwrap();
         let api_secret = env::var("OPENTOK_SECRET").unwrap();
