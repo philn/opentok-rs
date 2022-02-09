@@ -11,6 +11,7 @@ env:
   CARGO_TERM_COLOR: always
   OPENTOK_LIB_DIR: /home/runner/work/opentok-rs/opentok-rs/libopentok_linux_llvm_x86_64/lib
   LD_LIBRARY_PATH: /home/runner/work/opentok-rs/opentok-rs/libopentok_linux_llvm_x86_64/lib
+  RUST_BACKTRACE: 1
 
 jobs:
   build:
