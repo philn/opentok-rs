@@ -17,7 +17,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-21.10
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -28,6 +28,7 @@ jobs:
         rm -f libopentok_linux_llvm_x86_64-2.19.1
         sudo apt update
         sudo apt -y install clang libc++-dev libc++abi-dev libgstreamer-plugins-base1.0-dev
+        curl -v https://api.opentok.com
     - name: Build
       run: cargo build --verbose
     - name: Run tests
